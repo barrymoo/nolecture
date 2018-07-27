@@ -1,0 +1,25 @@
+{
+  "content": [
+    "what_is_python.ipynb",
+    "helper_syntax.ipynb",
+    "python_syntax.ipynb",
+    "documentation_inside_jupyter.ipynb",
+    "variables_and_types.ipynb",
+    "introduction_methods.ipynb",
+    "introduction_operators.ipynb",
+    "comparison_operators.ipynb",
+    "boolean_operators.ipynb",
+    "data_structures.ipynb",
+    "membership_operators.ipynb",
+    "membership_based_for.ipynb",
+    "unpacking_data_structures.ipynb",
+    "flow_control.ipynb",
+    "introduction_functions.ipynb",
+    "anonymous_functions.ipynb",
+    "iterators.ipynb",
+    "comprehensions.ipynb",
+    "read_and_write_files.ipynb",
+    "csv_to_tsv_beginner_problem.ipynb",
+    "additional_resources.ipynb"
+  ]
+}
