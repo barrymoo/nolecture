@@ -24,22 +24,24 @@ cells = []
 if isfile(arguments["<file.json>"]):
     with open(arguments["<file.json>"], "r") as f:
         include_content = json.load(f)
-    for ipynb_file in include_content["content"]:
-        ipynb_file_path = "content/{}".format(ipynb_file)
-        if isfile(ipynb_file_path):
-            with open(ipynb_file_path, "r") as f:
-                model = json.load(f)
-                cells.append(model["cells"])
-        else:
-            raise NameError("{} is not a file".format(ipynb_file_path))
+    for from_dir in include_content["content"]:
+        for content_dir, ipynb_files in from_dir.items():
+            for ipynb_file in ipynb_files:
+                ipynb_file_path = "content/{}/{}.ipynb".format(content_dir, ipynb_file)
+                if isfile(ipynb_file_path):
+                    with open(ipynb_file_path, "r") as f:
+                        model = json.load(f)
+                        cells.append(model["cells"])
+                else:
+                    raise NameError("{} is not a file".format(ipynb_file_path))
 else:
     raise NameError("{} is not a file".format(arguments["<file.json>"]))
 
 # Build a JSON string to put into template
-filler = ""
+content = ""
 for outer in cells:
     for inner in outer:
-        filler += "{},\n".format(json.dumps(inner))
+        content += "{},\n".format(json.dumps(inner))
 
 # Read the template
 with open("skel.jinja2") as f:
@@ -47,5 +49,5 @@ with open("skel.jinja2") as f:
 
 # Generate the JSON output inserting the string into Template
 # -> print the pretty printed json
-output = json.loads(template.render(content=filler.strip()[0:-1]))
+output = json.loads(template.render(content=content.strip()[0:-1]))
 print(json.dumps(output, indent=2))

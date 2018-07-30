@@ -1,0 +1,18 @@
+{
+    "content": [
+        {
+            "introductory": [
+                "title",
+                "who_am_i",
+                "initial_steps",
+                "what_is_jupyter_hub",
+                "what_is_python",
+                "why_jupyter_and_python",
+                "helper_syntax",
+                "cells",
+                "active_learning",
+                "python_syntax"
+            ]
+        }
+    ]
+}
