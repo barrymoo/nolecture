@@ -1,0 +1,11 @@
+{
+    "content": [
+        {
+            "operators": [
+                "introduction_operators",
+                "comparison_operators",
+                "boolean_operators"
+            ]
+        }
+    ]
+}
