@@ -1,9 +1,10 @@
 {
     "content": [
         {
-            "flow_control": [
-                "if"
+            "files": [
+                "files"
             ]
         }
     ]
 }
+

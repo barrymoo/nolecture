@@ -2,8 +2,9 @@
     "content": [
         {
             "functions": [
-                "introduction_functions",
-                "anonymous_functions"
+                "intro",
+                "members",
+                "anonymous"
             ]
         }
     ]

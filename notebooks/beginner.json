@@ -1,0 +1,67 @@
+{
+    "content": [
+        {
+            "introductory": [
+                "title",
+                "who_am_i",
+                "initial_steps",
+                "what_is_jupyter_hub",
+                "what_is_python",
+                "why_jupyter_and_python",
+                "helper_syntax",
+                "cells",
+                "active_learning",
+                "python_syntax"
+            ]
+        },
+        {
+          "types": [
+            "variables_and_types"
+          ]
+        },
+        {
+            "operators": [
+                "introduction_operators",
+                "comparison_operators",
+                "boolean_operators"
+            ]
+        },
+        {
+            "data_structures": [
+                "data_structures"
+            ]
+        },
+        {
+            "loops": [
+                "for"
+            ]
+        },
+        {
+            "flow_control": [
+                "if"
+            ]
+        },
+        {
+            "functions": [
+                "intro",
+                "members",
+                "anonymous"
+            ]
+        },
+        {
+            "iterators": [
+                "iterators"
+            ]
+        },
+        {
+            "comprehensions": [
+                "comprehensions"
+            ]
+        },
+        {
+            "files": [
+                "files"
+            ]
+        }
+    ]
+}
