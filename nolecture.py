@@ -48,6 +48,6 @@ with open("skel.jinja2") as f:
     template = Template(f.read())
 
 # Generate the JSON output inserting the string into Template
-# -> print the pretty printed json
+# -> pretty printed json
 output = json.loads(template.render(content=content.strip()[0:-1]))
 print(json.dumps(output, indent=2))

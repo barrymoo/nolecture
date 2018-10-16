@@ -62,6 +62,27 @@
             "files": [
                 "files"
             ]
+        },
+        {
+            "modules": [
+                "modules"
+            ]
+        },
+        {
+            "projects": [
+                "project0",
+		"project1"
+            ]
+        },
+        {
+            "additional_resources": [
+                "additional_resources"
+            ]
+        },
+        {
+            "survery": [
+                "survey"
+            ]
         }
     ]
 }
