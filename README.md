@@ -19,7 +19,8 @@ the workshop:
     - deep learning (e.g. tensorflow)
     - databases (e.g. dataset)
     - linear algebra (e.g. numpy and scipy)
-- didn't provide examples in my domain
+    - web scraping (e.g. requests and beautifulsoup)
+- didn't provide examples in _insert domain here_
 
 ### How To Handle These Issues?
 
@@ -28,19 +29,23 @@ who are. I have gone through a few iterations of this workshop and I am quite
 happy with the content.
 
 In Undergrad, I took Chemistry I/II where the Professor used [Process Oriented
-Guided Inquiry Learning POGIL](https://www.pogil.org/). POGIL boiled down to
-one sentence, omitting lots of details: students are given notebooks to work on
-with a group during class. These notebooks present fundamental concepts in the
-domain with questions to reinforce those concepts.  I used this idea and extended
-it to scientists learning programming. At one extreme, the scientists
-have little to no programming experience. The other extreme, they have extensive
-programming experience in other languages (usually Fortran/C/C++) and want
-to learn Python. I have encountered undergraduates, graduate students, postdoctoral
-associates, and professors. There is a POGIL for Computer Science students, but
-this is not how scientists learn. Scientists look at programming similarly to
-a spreadsheet. Programming is a tool which helps them complete cool new science.
-Teaching programming to scientists as if they were computer scientists doesn't
-work.
+Guided Inquiry Learning POGIL](https://www.pogil.org/). If I wanted to boil
+down POGIL into a few sentences (poor representation, but sufficient for this
+discussion):
+
+```
+Students are given notebooks to work on with a group during class.
+These notebooks present fundamental concepts in the domain with questions to
+reinforce those concepts.
+```
+
+I used this idea and applied it to scientists learning programming. The
+backgrounds scientists have in programming vary wildly. I have encountered
+undergraduates, graduate students, postdoctoral associates, and professors.
+There is a POGIL for Computer Science undergraduates, but this just doens't
+work for scientists. Scientists look at programming similarly to a spreadsheet,
+programming is a tool which helps them complete cool new science. It needs
+to be presented as a tool, not an academic discipline.
 
 Using a Jupyter Notebook with a guided learning approach I can:
 
@@ -57,14 +62,18 @@ how they are doing. The students will be enthusiastic if you are as well.
 
 ### Building a Notebook
 
-The `nolecture.py` tool simply concatenates content written in Jupyter Notebooks
-into a single Notebook which you can share with your students. I originally
-worked on [tapestry](https://github.com/barrymoo/tapestry) which was a single
-notebook, but I found iterations on the notebooks annoying. Now you can
-focus on single concepts at a time and pick and choose the pieces you want.
-
-Because Jupyter Notebooks are JSON, I define concatenatations in JSON.
-Example (from `notebooks/functions.json`):
+The `nolecture.py` tool simply concatenates content written in Jupyter
+Notebooks into a single Notebook which you can share with your students. I
+originally worked on [tapestry](https://github.com/barrymoo/tapestry) which was
+a single notebook, but I found iterations on the notebooks difficult.
+Additionally tapestry was broken up into beginner, intermediate, and advanced
+notebooks but I wanted all users to see the same content. Advanced users will
+just progress more rapidly. The separation allows the content creator to focus
+on single concepts at a time and make sure it is self-contained. Notebooks
+should not depend on cells ran from other notebooks. It is fine to include
+reminders about concepts they would have previously gained. Jupyter Notebooks
+are JSON and therefore I decided to define concatenatations as JSON.  Example
+(from `notebooks/functions.json`):
 
 ```json
 {
@@ -98,18 +107,22 @@ My current workshop notebook is built with `notebooks/beginner.json`.
 ### What's Next
 
 - The content uses very basic data science examples
-    - domain specific variations will be important!
+    - Domain specific variations will be important!
+    - My current idea is to have graduate students in a domain specialize
+      notebooks into specific branches
 - There is specific information related to how my users connect to JupyerHub
-    - And myself, this would benefit from a templating approach
-- Thinking about fundamental pedagogy of programming to scientists
-- I need to find students to help with domain specificity
-    - My current idea is to have graduate students in a domain, specialize
-      notebooks into specific branches (to start)
+    - And my contact information
+        - This would benefit from templating
+- Think about fundamental pedagogy of programming to scientists
 - I expect you to be running your own JupyterHub, this might not be very convenient
     - BinderHub could be useful here
 - Many users also ask for R programming workshops, I need someone to convert the
   code into R
 - Only enough material for a relatively short workshop
     - Mine are usually 3 hours, beginners will not finish in 3 hours
-- Specializations to complete after base:
-    - E.g. `pandas` notebook, `scikit-learn` notebook, etc.
+- Adding library specific notebooks for students who have the base knowledge, current plans:
+    - pandas (somewhat together from tapestry)
+    - scikit-learn and tensorflow
+    - dataset
+    - numpy and scipy
+    - requests and beautifulsoup
