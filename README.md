@@ -126,3 +126,4 @@ My current workshop notebook is built with `notebooks/beginner.json`.
     - dataset
     - numpy and scipy
     - requests and beautifulsoup
+- Dealing with data dependencies, e.g. those in `data/`
