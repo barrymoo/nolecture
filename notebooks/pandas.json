@@ -1,0 +1,19 @@
+{
+    "content": [
+        {
+            "pandas": [
+                "intro",
+                "data_structures_intro",
+                "head",
+                "basic_access_and_dtypes",
+                "slicing_indexing",
+                "boolean_array_access",
+                "basic_statistics",
+                "plotting",
+                "apply_lambda",
+                "axis",
+                "writing_csvs"
+            ]
+        }
+    ]
+}
