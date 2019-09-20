@@ -12,7 +12,10 @@
                 "plotting",
                 "apply_lambda",
                 "axis",
-                "writing_csvs"
+                "writing_csvs",
+                "merge_join_concatenate",
+                "groupby_pivot",
+                "str_manipulations"
             ]
         }
     ]
