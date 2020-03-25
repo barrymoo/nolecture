@@ -15,7 +15,8 @@
                 "writing_csvs",
                 "merge_join_concatenate",
                 "groupby_pivot",
-                "str_manipulations"
+                "str_manipulations",
+                "categorical_variables"
             ]
         },
         {
